@@ -1,0 +1,22 @@
+<!DOCTYPE html><html>
+<head>
+  <script src='js/react.development.js'></script>
+  <script src='js/react-dom.development.js'></script>
+  <script src="js/babel.js"></script>
+</head>
+<body>
+<div id="root"></div>
+<script type="text/babel">
+
+  class Welcome extends React.Component {
+    render() {
+      return <h1>Bonjour, {this.props.name}</h1>;
+    }
+  }
+ 
+  const element = <Welcome name="ESSARRAJ" />;
+  ReactDOM.render(element, document.getElementById('root'));
+
+</script>
+
+</body></html>
