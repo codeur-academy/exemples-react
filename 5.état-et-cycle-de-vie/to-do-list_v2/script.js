@@ -32,7 +32,7 @@ class App extends React.Component {
    // this.addTask()
 
     // Simuler l'événement click sur add
-    this.timerID = setInterval(
+     this.timerID = setInterval(
       () => this.addTask(),
       1000
     );
@@ -41,15 +41,19 @@ class App extends React.Component {
 
   addTask() {
     
-    let tasks = this.state.tasksArray
-    
-    tasks.push({
+    this.state.tasksArray.push({
       value: "Tâche " +  new Date().getSeconds(),
       done: false
     })
-    
-    this.setState({tasksArray: tasks})
 
+    
+
+    
+    this.setState(state => ({
+      tasksArray: state.tasksArray
+    }));
+
+   
   }
 
   render() {
