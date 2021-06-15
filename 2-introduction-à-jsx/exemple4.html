@@ -1,0 +1,27 @@
+<!DOCTYPE html><html><head></head>
+<body>
+
+<div id="root"></div>
+
+<script src='https://unpkg.com/react/umd/react.development.js'></script>
+<script src='https://unpkg.com/react-dom/umd/react-dom.development.js'></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+<script type="text/babel">
+  
+  // Création d'un objet
+  const user = {
+     firstname : "ESSARRAJ",
+     lastename : "Fouad"
+  }
+
+  function formatName(person){
+    return person.firstname + " " + person.lastename;
+  }
+
+  const element = <h1>Bonjour 3, {formatName(user)}</h1>
+  const container = document.getElementById("root");
+  ReactDOM.render(element, container);
+</script>
+
+</body></html>
