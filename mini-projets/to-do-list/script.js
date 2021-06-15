@@ -36,7 +36,7 @@ class App extends React.Component {
     
     let tasksArray = this.state.tasksArray
     
-    if (this.state.value.length != 0) {
+    if (addInput.value.length != 0) {
       tasksArray.push({
         value: addInput.value,
         done: false
@@ -68,7 +68,7 @@ class App extends React.Component {
   }
 
   onChangeInput(e) {
-    this.setState({value: e.target.value})
+    // this.setState({value: e.target.value})
   }
 
   render() {
