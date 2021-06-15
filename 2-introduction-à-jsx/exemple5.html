@@ -15,16 +15,18 @@
      lastename : "Fouad"
   }
 
-  function getGreeting(person){
-    if(person){
-      return "Bonjour " person.firstname + " " + person.lastename;
-    }else{
-      return "Bonjour, Inconnue";
-    }
-    
+  function formatName(person){
+    return person.firstname + " " + person.lastename;
   }
 
-  const element = <h1>{getGreeting(nil)}</h1>
+  function getGreeting(user) {
+    if (user) {
+      return <h1>Bonjour, {formatName(user)} !</h1>;
+    }
+    return <h1>Bonjour, Belle Inconnue.</h1>;
+  }
+
+  const element = getGreeting(null)
   const container = document.getElementById("root");
   ReactDOM.render(element, container);
 

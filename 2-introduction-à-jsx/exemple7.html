@@ -1,6 +1,6 @@
 <!DOCTYPE html><html><head></head>
 <body>
-
+  <div id="app"></div>
 <div id="root"></div>
 
 <script src='https://unpkg.com/react/umd/react.development.js'></script>
@@ -8,8 +8,9 @@
 <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 
 <script type="text/babel">
-  const name = 'ESSARRAJ Fouad 1'
-  const element = <h1>Bonjour, {name}</h1>
+  const title = "<p>Bonjour</p>";
+  // Ceci est sans risque :
+  const element = <h1>{title}</h1>;
   const container = document.getElementById("root");
   ReactDOM.render(element, container);
 </script>
