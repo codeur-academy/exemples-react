@@ -1,0 +1,57 @@
+<!DOCTYPE html><html>
+<head>
+  <script src='../assets/js/react.development.js'></script>
+  <script src='../assets/js/react-dom.development.js'></script>
+  <script src="../assets/js/babel.js"></script>
+</head>
+<body>
+<div id="root"></div>
+
+<script type="text/babel">
+
+class Clock extends React.Component {
+
+  constructor(props) {
+    super(props);
+    this.state = {date: new Date()};
+    
+  }
+
+  componentDidMount() {
+    this.timerID = setInterval(
+      () => this.tick(),
+      1000
+    );
+  }
+
+  componentWillUnmount() {
+    clearInterval(this.timerID);
+  }
+
+  tick() {
+
+    // il n'appelle pas "render"
+    // this.state.date = new Date();
+
+    // il appelle render
+    this.setState({ date: new Date()});
+  }
+
+  render() {
+    return (
+      <div>
+        <h1>Bonjour, monde !</h1>
+        <h2>Il est {this.state.date.toLocaleTimeString()}.</h2>
+      </div>
+    );
+  }
+}
+
+ReactDOM.render(
+    <Clock />,
+    document.getElementById('root')
+  );
+
+</script>
+
+</body></html>
