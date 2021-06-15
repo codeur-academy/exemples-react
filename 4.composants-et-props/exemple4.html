@@ -1,12 +1,14 @@
 <!DOCTYPE html><html>
 <head>
-  <script src='js/react.development.js'></script>
-  <script src='js/react-dom.development.js'></script>
-  <script src="js/babel.js"></script>
+  <script src='../assets/js/react.development.js'></script>
+  <script src='../assets/js/react-dom.development.js'></script>
+  <script src="../assets/js/babel.js"></script>
 </head>
 <body>
 <div id="root"></div>
+
 <script type="text/babel">
+
 function formatDate(date) {
   return date.toLocaleDateString();
 }
@@ -44,10 +46,10 @@ function Comment(props) {
 
 const comment = {
   date: new Date(),
-  text: 'I hope you enjoy learning React!',
+  text: "J'espère que vous apprécierez d'apprendre React !",
   author: {
-    name: 'Hello Kitty',
-    avatarUrl: 'https://placekitten.com/g/64/64',
+    name: 'Hello ESSARRAJ',
+    avatarUrl: 'https://s.gravatar.com/avatar/e1cd7eaea3fcf6c1e320fd9378713d4f?s=80',
   },
 };
 ReactDOM.render(
@@ -58,6 +60,7 @@ ReactDOM.render(
   />,
   document.getElementById('root')
 );
+
 
 </script>
 
