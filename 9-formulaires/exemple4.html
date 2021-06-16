@@ -1,0 +1,45 @@
+<!DOCTYPE html><html>
+<head>
+  <!-- version plus que 16.3 -->
+  <script src='https://unpkg.com/react/umd/react.development.js'></script>
+  <script src='https://unpkg.com/react-dom/umd/react-dom.development.js'></script>
+  
+  <script src="../assets/js/babel.js"></script>
+</head>
+<body>
+  <h1>Composants non-contrôlés</h1>
+<div id="root"></div>
+
+<script type="text/babel">
+class NameForm extends React.Component {
+  constructor(props) {
+    super(props);
+    this.handleSubmit = this.handleSubmit.bind(this);
+    this.input = React.createRef();
+  }
+
+  handleSubmit(event) {
+    alert('Un nom a été envoyé : ' + this.input.current.value);
+    event.preventDefault();
+  }
+
+  render() {
+    return (
+      <form onSubmit={this.handleSubmit}>
+        <label>
+          Nom :
+          <input type="text" ref={this.input} />
+        </label>
+        <input type="submit" value="Envoyer" />
+      </form>
+    );
+  }
+}
+ReactDOM.render(
+  <NameForm  />,
+  document.getElementById('root')
+);
+
+</script>
+
+</body></html>

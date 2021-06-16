@@ -1,0 +1,38 @@
+<!DOCTYPE html><html>
+<head>
+  <script src='../assets/js/react.development.js'></script>
+  <script src='../assets/js/react-dom.development.js'></script>
+  <script src="../assets/js/babel.js"></script>
+</head>
+<body>
+<div id="root"></div>
+
+<script type="text/babel">
+class Example extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      count: 0
+    };
+  }
+
+  render() {
+    return (
+      <div>
+        <p>Vous avez cliqué {this.state.count} fois</p>
+        <button onClick={() => this.setState({ count: this.state.count + 1 })}>
+          Cliquez ici
+        </button>
+      </div>
+    );
+  }
+}
+
+ReactDOM.render(
+  <Example  />,
+  document.getElementById('root')
+);
+
+</script>
+
+</body></html>

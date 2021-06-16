@@ -1,0 +1,41 @@
+<!DOCTYPE html><html>
+<head>
+  <script src='../assets/js/react.development.js'></script>
+  <script src='../assets/js/react-dom.development.js'></script>
+  <script src="../assets/js/babel.js"></script>
+</head>
+<body>
+<div id="root"></div>
+
+<script type="text/babel">
+class NameForm extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {value: ''};
+  }
+
+  handleSubmit(event) {
+    alert('Le nom a été soumis : ' + this.state.value);
+    event.preventDefault();
+  }
+
+  render() {
+    return (
+      <form onSubmit={this.handleSubmit.bind(this)}>
+        <label>
+          Nom :
+          <input type="text" value={this.state.value} onChange={(event) => this.setState({ value: event.target.value })} />
+        </label>
+        <input type="submit" value="Envoyer" />
+      </form>
+    );
+  }
+}
+ReactDOM.render(
+  <NameForm  />,
+  document.getElementById('root')
+);
+
+</script>
+
+</body></html>
