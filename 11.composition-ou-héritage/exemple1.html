@@ -1,0 +1,45 @@
+<!DOCTYPE html><html>
+<head>
+  <script src='../assets/js/react.development.js'></script>
+  <script src='../assets/js/react-dom.development.js'></script>
+  <script src="../assets/js/babel.js"></script>
+</head>
+<body>
+<h1>Composition ou héritage ?</h1>
+<div id="root"></div>
+
+<script type="text/babel">
+
+function FancyBorder(props) {
+  return (
+    <div className={'FancyBorder FancyBorder-' + props.color}>
+      {props.children}
+    </div>
+  );
+}
+
+function WelcomeDialog() {
+  return (
+    <FancyBorder color="blue">
+      <h1 className="Dialog-title">
+        Welcome
+      </h1>
+      <p className="Dialog-message">
+        Thank you for visiting our spacecraft!
+      </p>
+    </FancyBorder>
+  );
+}
+
+ReactDOM.render(
+  <WelcomeDialog />,
+  document.getElementById('root')
+);
+
+
+ 
+
+ 
+</script>
+
+</body></html>
