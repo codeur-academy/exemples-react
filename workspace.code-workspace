@@ -4,7 +4,9 @@
 			"path": "."
 		}
 	],
-	"settings": {},
+	"settings": {
+		"liveServer.settings.port": 5501
+	},
 	"launch": {
 		"version": "0.2.0",
 		"configurations": [
