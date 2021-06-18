@@ -11,7 +11,6 @@
 
 class Welcome extends React.Component {
   // variables 
-
   // fonctions
 
   render() {
@@ -19,7 +18,23 @@ class Welcome extends React.Component {
   }
 }
 
- ReactDOM.render(<Welcome name = "ESSARRAJ"/>, document.getElementById('root'));
+class App extends React.Component {
+  render() {
+    return (
+    <div>
+      <Welcome name="Madani" />
+      <Welcome name="Chami" />
+    </div>
+  );
+  }
+}
+
+
+ReactDOM.render(
+  <App />,
+  document.getElementById('root')
+);
+
 </script>
 
 </body></html>

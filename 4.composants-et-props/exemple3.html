@@ -16,14 +16,21 @@ function Welcome(props) {
 function App() {
   return (
     <div>
-      <Welcome name="Madani" />
-      <Welcome name="Chami" />
+      <h1>Présentation des utilisateurs</h1>
+
+      <ul>
+        <li><Welcome name="Madani" /></li>
+        <li><Welcome name="Chami" /></li>
+      </ul>
+      
+      <h2>Menu</h2>
+ 
     </div>
   );
 }
 
 ReactDOM.render(
-  <App />,
+  <App/>,
   document.getElementById('root')
 );
 
