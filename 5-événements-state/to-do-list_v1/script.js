@@ -37,7 +37,13 @@ class App extends React.Component {
     $.getJSON( "/5-%C3%A9v%C3%A9nements-state/to-do-list_v1/data.json", 
     function( data ) {
       this.setState({ taskList: data});
-    }.bind(this));
+    }.bind(this))
+    .fail(function(jqXHR, textStatus, errorThrown) 
+    {
+   
+       console.log(errorThrown);
+   })
+    ;
  
   }
 
