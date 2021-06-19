@@ -10,19 +10,20 @@
 <script type="text/babel">
 
 function fonction1(){
- alert("fonction1");
+  alert("fonction1");
 }
 
-class Toggle extends React.Component {
+class App extends React.Component {
 
   fonction2() {
-    let var1 =  this.props ;
+    let data =  this.props ;
     alert("fonction2")
   }
 
   render() {
     return (
       <div>
+        <h1 onClick={fonction1}>Gestion des tâches</h1>
         <button onClick={this.fonction2.bind(this)}>
             OK
         </button>
@@ -32,7 +33,7 @@ class Toggle extends React.Component {
 }
 
 ReactDOM.render(
-  <Toggle />,
+  <App />,
   document.getElementById('root')
 );
 
