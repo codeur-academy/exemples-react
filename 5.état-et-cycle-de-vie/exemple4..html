@@ -5,6 +5,8 @@
   <script src="../assets/js/babel.js"></script>
 </head>
 <body>
+<button onclick="alert('bonjour')">ok</button>
+
 <div id="root"></div>
 
 <script type="text/babel">
@@ -15,20 +17,29 @@ class Clock extends React.Component {
 
   constructor(props) {
     super(props);
+    this.variable1 =  {date: new Date()};
+    this.state = {date: new Date()};
+    
   }
 
   componentDidMount() {
-    console.log("componentDidMount");
+  //  setInterval(() => this.timer(),1000 );
   }
 
-  componentWillUnmount() {
-    console.log("componentWillUnmount");
+
+  timer() {
+    this.state = new Date().toDateString();
+    this.variable1 =  new Date().toDateString();
+    // this.setState({ date: new Date()});
   }
 
   render() {
     return (
       <div>
-       <h1>Bonjour</h1>
+        <h1>Bonjour 1</h1>
+       
+        <h2>Il est {this.state.date.toLocaleTimeString()}.</h2>
+        <h2>Il est {this.variable1.date.toLocaleTimeString()}.</h2>
       </div>
     );
   }

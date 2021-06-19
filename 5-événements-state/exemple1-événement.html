@@ -8,33 +8,25 @@
 <div id="root"></div>
 
 <script type="text/babel">
+
+function fonction1(){
+ alert("fonction1");
+}
+
 class Toggle extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {message: "Bonjour"};
 
-    // Cette liaison est nécéssaire afin de permettre
-    // l'utilisation de `this` dans la fonction de rappel.
-    
-  }
-
-  handleClick() {
-    this.setState(state => ({
-      message:  messageInput.value  
-    }));
+  fonction2() {
+    let var1 =  this.props ;
+    alert("fonction2")
   }
 
   render() {
     return (
       <div>
-        <input type="text" id="messageInput"  />
-        <button onClick={this.handleClick.bind(this)}>
+        <button onClick={this.fonction2.bind(this)}>
             OK
         </button>
-        <label> {this.state.message}</label>
       </div>
-   
-     
     );
   }
 }

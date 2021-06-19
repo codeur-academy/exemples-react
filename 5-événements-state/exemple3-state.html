@@ -1,0 +1,49 @@
+<!DOCTYPE html><html>
+<head>
+  <script src='../assets/js/react.development.js'></script>
+  <script src='../assets/js/react-dom.development.js'></script>
+  <script src="../assets/js/babel.js"></script>
+</head>
+<body>
+<div id="root"></div>
+
+<script type="text/babel">
+
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      title: "Gestion des tâches"
+    };
+  }
+
+  functionClick() {
+    
+    // méthode 1
+    //this.state.message = "bbbb";
+    this.setState({title: "Gestion des tâches" + " " + new Date().toLocaleTimeString()});
+    
+    // méthode 2
+    //this.setState({message1: this.state.message1 + "avec modification"});
+    //this.setState(state => ({ message1:  state.message1  + " aa"}));
+   
+  }
+
+  render() {
+    return (
+      <div>
+        <h1 onClick={this.functionClick.bind(this)} >{this.state.title}</h1>
+      </div>
+    );
+  }
+}
+
+ReactDOM.render(
+  <App />,
+  document.getElementById('root')
+);
+
+
+</script>
+
+</body></html>
