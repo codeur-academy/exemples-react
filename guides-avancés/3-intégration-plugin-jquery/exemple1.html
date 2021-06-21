@@ -1,0 +1,57 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <script src="https://unpkg.com/@babel/standalone/babel.js"></script>
+  <script src="https://unpkg.com/react/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom/umd/react-dom.development.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.6.2/chosen.jquery.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.6.2/chosen.min.css">
+</head>
+<body>
+  
+</body>
+</html>
+
+<div id="root"/>
+<script type="text/babel">
+
+class Chosen extends React.Component {
+ 
+  componentDidMount() {
+    this.elementSelect = $(this.selectRef);
+    this.elementSelect.chosen();
+  }
+  
+  componentWillUnmount() {
+    this.elementSelect.chosen('destroy');
+  }
+  
+  render() {
+    return (
+      <div>
+        <select className="Chosen-select" ref={el => this.selectRef = el}>
+          {this.props.children}
+        </select>
+      </div>
+    );
+  }
+}
+
+function Example() {
+  return (
+    <Chosen>
+      <option>vanilla</option>
+      <option>chocolate</option>
+      <option>strawberry</option>
+    </Chosen>
+  );
+}
+
+ReactDOM.render(
+  <Example />,
+  document.getElementById('root')
+);
+</script>
