@@ -1,0 +1,33 @@
+<!DOCTYPE html><html><head></head>
+<body>
+
+<div id="root"></div>
+
+<script src='https://unpkg.com/react/umd/react.development.js'></script>
+<script src='https://unpkg.com/react-dom/umd/react-dom.development.js'></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+<script type="text/babel">
+
+function ExampleWithManyStates() {
+  // Déclaration de multiples variables d'état !
+  const [age, setAge] = React.useState(42);
+  const [fruit, setFruit] = React.useState('banane');
+  const [todos, setTodos] = React.useState([{ text: 'Apprendre les Hooks' }]);
+  
+  return <div>
+    <ul>
+      <li onClick={()=> setAge(age + 1)} >{age}</li>  
+      <li>{fruit}</li>  
+      <li>{todos[0].text}</li>  
+    </ul>
+    </div>
+
+}
+
+
+  const container = document.getElementById("root");
+  ReactDOM.render(<ExampleWithManyStates />, container);
+</script>
+
+</body></html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html><html><head></head>
+<body>
+
+<div id="root"></div>
+
+<script src='https://unpkg.com/react/umd/react.development.js'></script>
+<script src='https://unpkg.com/react-dom/umd/react-dom.development.js'></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+<script type="text/babel">
+
+function Example() {
+  const [count, setCount] = React.useState(0);
+
+  // Équivalent à componentDidMount plus componentDidUpdate :
+  React.useEffect(() => {
+    // Mettre à jour le titre du document en utilisant l'API du navigateur
+    document.title = `Vous avez cliqué ${count} fois`;
+  });
+
+  return (
+    <div>
+      <p>Vous avez cliqué {count} fois</p>
+      <button onClick={() => setCount(count + 1)}>
+        Cliquez ici
+      </button>
+    </div>
+  );
+}
+
+
+  const container = document.getElementById("root");
+  ReactDOM.render(<Example />, container);
+</script>
+
+</body></html>
