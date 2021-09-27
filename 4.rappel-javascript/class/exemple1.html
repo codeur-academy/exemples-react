@@ -1,23 +1,23 @@
 <!DOCTYPE html>
 <html>
-
 <body>
   
 <script>
 class Voiture {
   marque;
-  /*
   constructor(name) {
-    this.brand = name;
+    this.marque = name;
   }
-  */
 }
 
-maVoiture = new Voiture();
-maVoiture.marque = "Ford";
+voiture1 = new Voiture();
+voiture1.marque = "marque1";
 
-document.write(maVoiture.marque);
+voiture2 = new Voiture("marque2");
+
+document.write(voiture1.marque);
+document.write('<br />');
+document.write(voiture2.marque);
 </script>
-
 </body>
 </html>

@@ -1,8 +1,8 @@
 <!DOCTYPE html><html>
 <head>
-  <script src='../assets/js/react.development.js'></script>
-  <script src='../assets/js/react-dom.development.js'></script>
-  <script src="../assets/js/babel.js"></script>
+  <script src='../../assets/js/react.development.js'></script>
+  <script src='../../assets/js/react-dom.development.js'></script>
+  <script src="../../assets/js/babel.js"></script>
 </head>
 <body>
 <div id="root"></div>
@@ -13,7 +13,7 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      title: "Gestion des tâches"
+      title: this.props.title
     };
   }
 
@@ -21,7 +21,8 @@ class App extends React.Component {
     
     // méthode 1
     //this.state.message = "bbbb";
-    this.setState({title: "Gestion des tâches" + " " + new Date().toLocaleTimeString()});
+    this.setState(
+      {title: this.props.title + " " + new Date().toLocaleTimeString()});
     
     // méthode 2
     //this.setState({message1: this.state.message1 + "avec modification"});
@@ -39,7 +40,7 @@ class App extends React.Component {
 }
 
 ReactDOM.render(
-  <App />,
+  <App title={"Gestion des produits"} />,
   document.getElementById('root')
 );
 
