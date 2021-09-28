@@ -1,6 +1,6 @@
-# Install NPM
+# Installation de Node JS et npm
 
-## How to Install NodeJS and NPM on Windows 10?
+## Tutoriel d'installation Node JS sous Windows 10
 
 https://www.youtube.com/watch?v=X-FPCwZFU_8
 
