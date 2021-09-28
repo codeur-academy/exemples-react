@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>let - portée globale</title>
+</head>
+<body>
+    <script>
+        var x = 'global';    // ajouter une propriété à l'objet global
+        let y = 'global2';   // déclare une variable global
+        console.log(this.x); // "global"
+        console.log(this.y); // undefined
+        console.log(y);      // "global2"
+    </script>
+</body>
+</html>
