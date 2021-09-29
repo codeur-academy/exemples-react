@@ -3,6 +3,9 @@
   <script src='../../assets/js/react.development.js'></script>
   <script src='../../assets/js/react-dom.development.js'></script>
   <script src="../../assets/js/babel.js"></script>
+  <title>Création d'un composant en utilisant la classe</title>
+  <meta name="description" 
+  content="Créez le composant Article qui affiche un article avec titre et contenue">
 </head>
 <body>
 <div id="root"></div>
@@ -11,18 +14,15 @@
 class Welcome extends React.Component {
   nom;
   prenom;
-
   constructor(props) {
     super(props);
   }
-
   render() {
     return <h1>Bonjour, {this.nom} {this.props.name}</h1>;
   }
 }
 ReactDOM.render(<Welcome name = "ESSARRAJ"/>, 
 document.getElementById('root'));
-
 </script>
-
-</body></html>
+</body>
+</html>

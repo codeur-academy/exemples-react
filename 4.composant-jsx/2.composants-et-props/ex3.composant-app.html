@@ -1,8 +1,11 @@
 <!DOCTYPE html><html>
 <head>
-  <script src='../assets/js/react.development.js'></script>
-  <script src='../assets/js/react-dom.development.js'></script>
-  <script src="../assets/js/babel.js"></script>
+  <script src='../../assets/js/react.development.js'></script>
+  <script src='../../assets/js/react-dom.development.js'></script>
+  <script src="../../assets/js/babel.js"></script>
+  <title>Création d'un composant racine</title>
+  <meta name="description" 
+  content="Créer un composant App qui contient les composants d'un site web (Logo, Menu, Article)">
 </head>
 <body>
 <div id="root"></div>
@@ -10,9 +13,6 @@
 <script type="text/babel">
 
 class Welcome extends React.Component {
-  // variables 
-  // fonctions
-
   render() {
     return <h1>Bonjour, {this.props.name}</h1>;
   }
@@ -36,5 +36,4 @@ ReactDOM.render(
 );
 
 </script>
-
 </body></html>
