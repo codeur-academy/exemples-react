@@ -13,4 +13,4 @@ Si vous n'avez pas des base solide en JavaScript, Je vous propose de consulter l
 Si vous sentez bien avec JavaScript, vous pouvez passer la session suivant.
 
 ## Références 
-- [](https://developer.mozilla.org/fr/docs/Web/JavaScript/A_re-introduction_to_JavaScript)
+- [Une réintroduction à JavaScript](https://developer.mozilla.org/fr/docs/Web/JavaScript/A_re-introduction_to_JavaScript)

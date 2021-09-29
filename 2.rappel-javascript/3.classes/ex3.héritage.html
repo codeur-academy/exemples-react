@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<body>
+<script>
+
+class Vehicule {
+  constructor(marque) {
+    this.marque = marque;
+  }
+  affichage() {
+    return 'Je suis ' + this.marque;
+  }
+}
+
+// Héritage 
+class Voiture extends Vehicule {
+  constructor(marque, model) {
+    super(marque);
+    this.model = model;
+  }  
+  affichage() {
+    return super.affichage() + ' avec ' + this.model
+  }
+}
+
+voiture1 = new Voiture("marque1", "modèle1");
+document.write(voiture1.affichage());
+</script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Création d'une méthode</title>
+  <meta name="description" 
+  content="Ajoutez la méthode à votre classe">
+</head>
+<body>
+<script>
+// Création d'une méthode 
+class Vehicule {
+  constructor(marque) {
+    this.marque = marque;
+  }
+  affichage() {
+    return 'Je suis ' + this.marque;
+  }
+}
+
+vehicule1 = new Vehicule("marque1");
+document.write(vehicule1.affichage());
+</script>
+
+</body>
+</html>

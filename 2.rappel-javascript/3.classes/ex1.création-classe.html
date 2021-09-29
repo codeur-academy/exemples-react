@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Exemple d'une classe avec constructeur</title>
+  <meta name="description" 
+  content="Refaire l'exemple en traduisant les tous les variables en anglais">
+</head>
+<body>
+<script>
+// Création d'une classe
+class Vehicule {
+  marque;
+  constructor(name) {
+    this.marque = name;
+  }
+}
+
+// Création d'un objet avec le constructeur par défaut
+vehicule1 = new Vehicule();
+vehicule1.marque = "marque1";
+
+// Création d'un objet en utilisant notre constructeur
+vehicule2 = new Vehicule("marque2");
+
+// Exemple d'utilisation des attributs des objets
+document.write(vehicule1.marque);
+document.write('<br />');
+document.write(vehicule2.marque);
+</script>
+</body>
+</html>
